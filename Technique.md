@@ -115,7 +115,7 @@ Technique
    
    -  If you doing like this, you can get palindrome determination ASAP when for loop is done.
   
-3. Bit vector (In case of string)
+3. **`Bit vector`** (In case of string)
 
 ```cpp
 bool isPalindromePermutation(const std::string& s) {

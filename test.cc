@@ -1,38 +1,48 @@
 #include <iostream>
 #include <vector>
-#include <numeric>
+#include <algorithm>
 
 using namespace std;
 
-int findTargetSumWays(vector<int>& nums, int target) {
-    int totalSum = accumulate(nums.begin(), nums.end(), 0);
-    
-    // If the target sum is not achievable or invalid
-    if ((totalSum - target) < 0 || (totalSum - target) % 2 != 0) {
-        return 0;
+int trap(vector<int>& height) {
+    int n = height.size();
+    if (n == 0) return 0; // 빈 배열이면 0 반환
+
+    // 왼쪽 최대 높이를 저장하는 배열
+    vector<int> leftMax(n, 0);
+    // 오른쪽 최대 높이를 저장하는 배열
+    vector<int> rightMax(n, 0);
+
+    // 왼쪽 최대 높이 계산
+    leftMax[0] = height[0];
+    for (int i = 1; i < n; ++i) {
+        leftMax[i] = max(leftMax[i - 1], height[i]);
     }
-    
-    int subsetSum = (totalSum - target) / 2;
-    
-    // DP vector to store the number of ways to achieve each sum
-    vector<int> dp(subsetSum + 1, 0);
-    dp[0] = 1; // Base case: one way to achieve sum 0 (empty subset)
-    
-    // Update DP array
-    for (int num : nums) {
-        for (int j = subsetSum; j >= num; --j) {
-            dp[j] += dp[j - num];
+
+    // 오른쪽 최대 높이 계산
+    rightMax[n - 1] = height[n - 1];
+    for (int i = n - 2; i >= 0; --i) {
+        rightMax[i] = max(rightMax[i + 1], height[i]);
+    }
+
+    // 각 인덱스에서 물의 양 계산
+    int totalWater = 0;
+    for (int i = 0; i < n; ++i) {
+        int waterAtCurrent = min(leftMax[i], rightMax[i]) - height[i];
+        if (waterAtCurrent > 0) {
+            totalWater += waterAtCurrent;
         }
-        cout<< "d"<<endl;
     }
-    
-    return dp[subsetSum];
+
+    return totalWater;
 }
 
 int main() {
-    vector<int> nums = {1, 1, 2, 2, 2,3,3,6};
-    int target = 6;
+    // 예제 입력
+    vector<int> height = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
     
-    cout << "Number of ways to achieve target: " << findTargetSumWays(nums, target) << endl;
+    // 결과 출력
+    cout << "Trapped Water: " << trap(height) << endl;
+
     return 0;
 }
