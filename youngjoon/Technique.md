@@ -110,6 +110,9 @@ Technique
    - Count each element's frequency.
      - After loop, if one element's count is odd, then it's not palindrome.
      - Time complexity : O(N)
+   - If you want to check whether a specific key exists, use .find() or .count().
+     - .find(): Returns an iterator. Use this function if you need to work with the found element.
+     - .count(): Returns 0 or 1. 
 
 2. If the problem is determination problem, <u>check the count number same time</u> when approach element whether it's odd or not. 
    
