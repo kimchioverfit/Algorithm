@@ -7,11 +7,7 @@ description:
 img: leetcode.png # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 status: #failed or success
+difficulty: Easy/Medium/Hard
 ---
 
-# Basic 
-
-pair<int,int> 형태의 원소에 접근할 때는 .first, .second 로 접근하기.
-
-vector는 find() 가 없어서, std::find 써줘야 한다 
-find(v.begin(),v.end(),target) 이렇게 씀 
+# 
