@@ -1,6 +1,6 @@
 # Topological Sort
 
-<img src="./imgs/0-1.png" alt="0-1" width="500"/>
+<img src=".././imgs/0-1.png" alt="0-1" width="500"/>
 
 **`위상 정렬`**
 
@@ -16,7 +16,7 @@
 
 진출차수 (Outdegree) : 특정한 노드에서 나가는 간선의 개수
 
-<img src="./imgs/0-2.png" alt="0-2" width="500"/>
+<img src=".././imgs/0-2.png" alt="0-2" width="500"/>
 
 위상 정렬 알고리즘 동작 과정
 
@@ -34,13 +34,13 @@
 
 아래 그림을 통해 동작과정을 이해해보자.
 
-<img src="./imgs/0-3.png" alt="0-3" width="500"/>
+<img src=".././imgs/0-3.png" alt="0-3" width="500"/>
 
 위 그림은 위상 정렬을 수행할 그래프이다. 이때 위상 정렬을 수행할 수 있는 그래프는 사이클이 없는 방향 그래프 (DAG) 이여야 한다!
 
 
 [step 0] 진입차수가 0인 모든 노드를 큐에 삽입. 현재 1번 노드의 진입차수만 0이므로 큐에 1번 노드만 삽입하게 된다.
 
-<img src="./imgs/0-4.png" alt="0-4" width="500"/>
+<img src=".././imgs/0-4.png" alt="0-4" width="500"/>
 
 https://velog.io/@kimdukbae/%EC%9C%84%EC%83%81-%EC%A0%95%EB%A0%AC-Topological-Sorting
