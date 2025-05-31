@@ -1,0 +1,31 @@
+# ML & DL
+
+머신러닝과 딥러닝
+
+머신러닝이건 딥러닝이건 기본적으로 입력이 있고, 활성화 함수를 지나 출력이 되는 구조.
+
+---
+둘의 차이는 아래와 같다.
+
+<img src="../../imgs/ML_DL_Diff.png">
+
+머신 러닝은 인간 작업자가 특정 Feature 에 대한 `가중치 설정`등의 작업이 있어야 하지만, <u>딥러닝은 자기가 찾아서 함</u>. 
+
+레이어의 수 차이가 아님. 
+
+
+---
+**딥러닝 순서도**
+
+<img src="../../imgs/DNN.png">
+
+Input -> Model -> Prediciton -> Loss function -> Gradient descent -> Backpropagation
+
+Model 내부에는 활성함수가 들어가있고, 그 결과값을 가지고
+
+손실함수를 계산한다. 
+
+임계값보다 loss가 적으면 Early stopping할 수 있음.
+
+---
+
