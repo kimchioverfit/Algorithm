@@ -1,6 +1,4 @@
-# Classification
-
-분류
+# ✅ Classification(분류) 문제
 
 미리 정해진 Label, classes로 분류하는 작업 
 
