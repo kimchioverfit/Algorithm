@@ -24,6 +24,6 @@ Model 내부에는 활성함수가 들어가있고, 그 결과값을 가지고
    ↓
 3. [Output Layer]()
    ↓
-4. [Loss Function (손실함수)](./2.Loss_function.md)
+4. [Loss Function (손실함수)](./Loss_function.md)
    ↓
 5. [Optimizer]()
