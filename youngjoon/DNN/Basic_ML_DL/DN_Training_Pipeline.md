@@ -16,7 +16,7 @@ Model 내부에는 활성함수가 들어가있고, 그 결과값을 가지고
 1. Input Layer
    예: 이미지, 텍스트, 센서값 등
     ↓
-2. [Hidden Layers (Fully Connected or CNN)]()
+2. [Hidden Layers (Fully Connected or CNN)](./Hidden_layer.md)
    다양한 비선형 변환을 통해 특징 추출
    ReLU 같은 활성화 함수 사용
    Input layer 와 Output layer 사이의 모든 층.

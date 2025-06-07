@@ -27,6 +27,62 @@
 - \(f(\cdot)\): 활성화 함수 (ReLU, Sigmoid, Tanh 등)
 - \(\mathbf{h}\): 히든 레이어의 출력
 
+
+### 입력 벡터 예시 
+
+```math
+x = 
+\begin{bmatrix}
+x_1 \\
+x_2 \\
+\vdots \\
+x_n
+\end{bmatrix}
+\in \mathbb{R}^{n}
+```
+
+### 가중치 행렬 예시
+
+```math
+W =
+\begin{bmatrix}
+w_{11} & w_{12} & \cdots & w_{1n} \\
+w_{21} & w_{22} & \cdots & w_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+w_{m1} & w_{m2} & \cdots & w_{mn}
+\end{bmatrix}
+\in \mathbb{R}^{m \times n}
+```
+
+### 선형변환 계산식
+
+```math
+z = Wx + b =
+\begin{bmatrix}
+w_{11}x_1 + w_{12}x_2 + \cdots + w_{1n}x_n + b_1 \\
+w_{21}x_1 + w_{22}x_2 + \cdots + w_{2n}x_n + b_2 \\
+\vdots \\
+w_{m1}x_1 + w_{m2}x_2 + \cdots + w_{mn}x_n + b_m
+\end{bmatrix}
+```
+
+## 출력 벡터의 각 원소 표현
+
+```math
+z_i = \sum_{j=1}^{n} w_{ij} x_j + b_i \quad \text{for } i = 1, 2, \dots, m
+```
+
+이 식은 하나의 출력 뉴런 \( z_i \)가 모든 입력 \( x_j \)와 연결되어  
+**가중합 (weighted sum)** 을 수행한 뒤, 편향 \( b_i \)가 더해지는 구조임을 보여줍니다.
+
+즉, 입력 벡터 공간 \( \mathbb{R}^n \)이  
+가중치 행렬 \( W \in \mathbb{R}^{m \times n} \)를 통해  
+출력 벡터 공간 \( \mathbb{R}^m \)으로 **사상(mapping)** 되는  
+**선형변환(linear transformation)** 입니다.
+
+
+['이론적 예시 링크'](./Hidden_layer_sample.md) 
+
 ---
 
 ## 🔷 3. 왜 선형 + 비선형인가?
