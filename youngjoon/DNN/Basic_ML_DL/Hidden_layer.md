@@ -98,9 +98,11 @@ f(x) = W_2(W_1x) = W'x
 ### ✅ 비선형 함수 추가 시
 
 \[
-f(x) = W_2 \cdot \text{ReLU}(W_1 x + b_1) + b_2
+f(x) = W_2 \cdot \text{None Linear Function}(W_1 x + b_1) + b_2
 \]
 
+None Linear Function : sigmoid, softmax, ReLU 등등...
+(비선형 함수는 딥러닝에서는 활성함수로도 불린다.)
 - 비선형 함수로 인해 **비선형 함수 근사 가능**
 - **Universal Approximation Theorem**: 충분한 히든 노드와 비선형함수가 있다면, 어떤 함수도 근사 가능
 
