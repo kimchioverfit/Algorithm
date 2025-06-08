@@ -1,0 +1,59 @@
+---
+layout: post
+title: 386. Lexicographical Numbers
+category: leetcode
+date: 2025-06-08 18:58:00 +0900
+description: https://leetcode.com/problems/lexicographical-numbers/description/?envType=daily-question&envId=2025-06-08
+img: leetcode.png # Add image post (optional)
+fig-caption: # Add figcaption (optional)
+status: #failed or success
+difficulty: Medium
+---
+
+# 386. Lexicographical Numbers
+
+Given an integer n, return all the numbers in the range [1, n] sorted in lexicographical order.
+
+You must write an algorithm that runs in O(n) time and uses O(1) extra space. 
+
+ 
+
+> **Example 1**
+> 
+> Input: n = 13
+> 
+> Output: [1,10,11,12,13,2,3,4,5,6,7,8,9]
+
+> **Example 2**
+> 
+> Input: n = 2
+> 
+> Output: [1,2]
+
+
+### Solution(DFS)
+```cpp
+class Solution {
+public:
+    void solve(int currNum,int n, vector<int>&result){
+        if(currNum>n) return ;
+        result.push_back(currNum);
+        for(int append=0;append<=9;append++){
+            int newNum = currNum*10+append;
+            if(newNum>n) return ;
+            solve(newNum,n,result);
+        }
+        return ;
+    }
+    vector<int> lexicalOrder(int n) {
+        vector<int>result;
+        for (int startNum=1; startNum<=9;startNum++){
+            solve(startNum,n,result);
+        }
+        return result;
+        
+    }
+};
+```
+
+
