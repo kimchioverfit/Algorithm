@@ -1,6 +1,6 @@
 <div align="center">
 
-# Algorithm Party
+# Leet code Algorithm Party
 
 <img src="./youngjoon/imgs/main.png" alt="main" width="300"/>
 </div>
