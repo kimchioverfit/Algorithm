@@ -3,4 +3,4 @@
 **/.vscode
 ./venv
 ./vscode
-../venv
+.venv/
