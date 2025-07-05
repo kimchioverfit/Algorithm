@@ -144,5 +144,5 @@ difficulty: {difficulty}
     print(f"✅ 생성 완료: {output_path}")
 
 if __name__ == "__main__":
-    url = "https://leetcode.com/problems/find-the-k-th-character-in-string-game-ii/?envType=daily-question&envId=2025-07-04"
+    url = "https://leetcode.com/problems/find-the-original-typed-string-ii/?envType=daily-question&envId=2025-07-04"
     make_markdown(url)
